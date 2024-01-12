@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebBlog.Models
 {
-    [Table("ApplicationUsers")]
     public class ApplicationUser:IdentityUser
     {
         public string? FirstName { get; set; }
