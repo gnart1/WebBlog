@@ -30,7 +30,11 @@ namespace WebBlog.Areas.Admin.Controllers
         [HttpGet("Login")]
         public IActionResult Login()
         {
-            return View(new LoginVM());
+            if (!HttpContext.User.Identity.IsAuthenticated)
+            {
+                return View(new LoginVM());
+            }
+            return RedirectToAction("Index","User", new {area = "Admin"});
         }
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginVM vm)
@@ -57,5 +61,27 @@ namespace WebBlog.Areas.Admin.Controllers
             return RedirectToAction("Index", "User", new { area = "Admin" });
         }
 
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            _signInManager.SignOutAsync();
+            _notification.Success("Đăng xuất thành công!");
+            return RedirectToAction("Login", "Home", new {area = ""});
+        }
+
+        [HttpGet("Register")]
+        public IActionResult Register()
+        {
+            return View("Register");
+        }
+        [HttpPost("Register")]
+        public IActionResult Register(RegisterVM vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+            return RedirectToAction("Login");
+        }
     }
 }
