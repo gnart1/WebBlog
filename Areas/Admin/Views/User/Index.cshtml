@@ -1,10 +1,40 @@
-﻿
+﻿@model List<WebBlog.ViewModels.UserVM>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 } 
 <div class="container-fluid">
-    <h2>User Index Page</h2>
+    <a class="btn btn-primary mb-1" asp-action="Register" asp-controller="User">Tạo User</a>
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h4 class="card-title text-white">Danh sách người dùng</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Họ</th>
+                        <th>Tên</th>
+                        <th>Tài khoản</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var user in Model)
+                    {
+                        <tr>
+                            <td>@user.FristName</td>
+                            <td>@user.LastName</td>
+                            <td>@user.UserName</td>
+                            <td>
+                                <a href="#" class="btn btn-secondary">Forget Password</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 

@@ -1,5 +1,4 @@
 ﻿@using Microsoft.AspNetCore.Identity;
-@model WebBlog.Models.ApplicationUser
 @inject UserManager<ApplicationUser> _userManager;
 @{
     var loggedInUser = new ApplicationUser();
@@ -25,11 +24,10 @@
 
     <!-- Custom styles for this template-->
     <link href="~/dashboard/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -61,8 +59,6 @@
                     <span>Người dùng</span>
                 </a>
             </li>
-
-
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -146,7 +142,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; WEBBLOG 2023</span>
+            <span>Copyright &copy; WEBBLOG 2024</span>
         </div>
     </div>
 </footer>
@@ -197,6 +193,10 @@
 <!-- Page level custom scripts -->
 <script src="~/dashboard/js/demo/chart-area-demo.js"></script>
 <script src="~/dashboard/js/demo/chart-pie-demo.js"></script>
+<script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
+<script>
+        let table = new DataTable('#myTable');
+</script>
 @await RenderSectionAsync("Scripts", required: false)
     @await Component.InvokeAsync("Notyf")
 </body>

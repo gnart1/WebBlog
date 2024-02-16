@@ -1,4 +1,5 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +24,19 @@ namespace WebBlog.Areas.Admin.Controllers
             _notification = notification;
         }
 
-        public IActionResult Index()
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var users = await _userManager.Users.ToListAsync();
+            var vm = users.Select(x => new UserVM()
+            {
+                Id = x.Id,
+                FristName = x.FirstName,
+                LastName = x.LastName,
+                UserName = x.UserName,
+            }).ToList();
+            return View(vm);
         }
         [HttpGet("Login")]
         public IActionResult Login()
@@ -66,14 +77,16 @@ namespace WebBlog.Areas.Admin.Controllers
         {
             _signInManager.SignOutAsync();
             _notification.Success("Đăng xuất thành công!");
-            return RedirectToAction("Login", "Home", new {area = ""});
+            return RedirectToAction("Login", "User", new {area = "Admin"});
         }
 
-        [HttpGet("Register")]
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
         public IActionResult Register()
         {
-            return View("Register");
+            return View(new RegisterVM());
         }
+
         [HttpPost("Register")]
         public IActionResult Register(RegisterVM vm)
         {
