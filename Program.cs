@@ -22,6 +22,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/login";
+    options.AccessDeniedPath = "/AccessDenied";
 });
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();

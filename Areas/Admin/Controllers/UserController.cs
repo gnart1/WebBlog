@@ -51,11 +51,11 @@ namespace WebBlog.Areas.Admin.Controllers
         [HttpGet("Login")]
         public IActionResult Login()
         {
-            if (!HttpContext.User.Identity.IsAuthenticated)
+            if (!HttpContext.User.Identity!.IsAuthenticated)
             {
                 return View(new LoginVM());
             }
-            return RedirectToAction("Index","User", new {area = "Admin"});
+            return RedirectToAction("Index","Post", new {area = "Admin"});
         }
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginVM vm)
@@ -83,6 +83,7 @@ namespace WebBlog.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult Logout()
         {
             _signInManager.SignOutAsync();
@@ -184,5 +185,13 @@ namespace WebBlog.Areas.Admin.Controllers
             }
             return View(vm);
         }
+
+        [HttpGet("AccessDenied")]
+        [Authorize]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
     }
 }
