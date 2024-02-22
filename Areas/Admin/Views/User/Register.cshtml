@@ -5,46 +5,41 @@
 }
 
 <div class="container-fluid">
-    <a asp-area="Admin" asp-controller="User" asp-action="register" class="btn btn-primary mb-1">Tạo User</a>
     <div class="card">
         <div class="card-header bg-primary">
             <h4 class="card-title text-white">Thêm người dùng</h4>
         </div>
         <div class="card-body">
-            <form method="post" asp-area="Admin" asp-controller="User" asp-action="Login">
+            <form method="post" asp-area="Admin" asp-controller="User" asp-action="Register">
             <div class="form-group">
+                <label>FirstName</label>
                 <input asp-for="FirstName" type="text" class="form-control form-control-user"
-                       id="exampleInputEmail" aria-describedby="emailHelp"
-                       placeholder="FirstName...">
+                       id="exampleInputEmail" aria-describedby="emailHelp">
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label>LastName</label>
                 <input asp-for="LastName" type="text" class="form-control form-control-user"
-                       id="exampleInputEmail" aria-describedby="emailHelp"
-                       placeholder="LastName...">
+                       id="exampleInputEmail" aria-describedby="emailHelp">
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                    <label>Email</label>
                 <input asp-for="Email" type="text" class="form-control form-control-user"
-                       id="exampleInputEmail" aria-describedby="emailHelp"
-                       placeholder="Email...">
+                       id="exampleInputEmail" aria-describedby="emailHelp">
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
+                    <label>UserName</label>
                 <input asp-for="UserName" type="text" class="form-control form-control-user"
-                       id="exampleInputEmail" aria-describedby="emailHelp"
-                       placeholder="Enter UserName...">
+                       id="exampleInputEmail" aria-describedby="emailHelp">
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                    <label>Password</label>
                 <input asp-for="Password" type="password" class="form-control form-control-user"
-                       id="exampleInputPassword" placeholder="Password">
+                       id="exampleInputPassword">
                 <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input asp-for="RePassword" type="password" class="form-control form-control-user"
-                       id="exampleInputPassword" placeholder="RePassword">
-                <span asp-validation-for="RePassword" class="text-danger"></span>
             </div>
                 <div class="mb-2">
                     <input asp-for="IsAdmin" type="checkbox" class="custom-checkbox">
