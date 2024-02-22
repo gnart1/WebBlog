@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KSNfV5Q01ZT89XSQvuIi48B+tXuiCDsLGGnPRSpvBP4=",
+  "Hash": "SoahcM/tKksGufP8QZ6M+S+rD/n4AXnPdwPHHq/L2M0=",
   "Source": "WebBlog",
   "BasePath": "_content/WebBlog",
   "Mode": "Default",
@@ -32842,6 +32842,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\default_image.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/default_image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\default_image.png"
     },
     {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\js\\site.js",

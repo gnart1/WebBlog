@@ -7465,6 +7465,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\default_image.png",
+      "PackagePath": "staticwebassets\\image\\default_image.png"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,0 +1,56 @@
+﻿@model WebBlog.ViewModels.PostVM
+@{
+    ViewData["Title"] = "Thêm bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <a asp-action="Create" asp-controller="Post" asp-area="Admin" class="btn btn-" ></a>
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h4 class="card-title text-white">Thêm bài viết</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Create">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="mb-2">
+                            <label>Tiêu đề</label>
+                            <input asp-for="Title" type="text" class="form-control">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label>Ghi chú</label>
+                            <input asp-for="ShortDescription" type="text" class="form-control">
+                            <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label>Nội dung</label>
+                            <textarea asp-for="Description" type="text" class="form-control" rows="8"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                     <div class="col-3">
+                            <div class="mb-2">
+                                <img src="~/image/default_image.png" class="img-fluid" />
+                            </div>
+                            <div class="mb-2">
+                                <label>Ảnh</label>
+                                <input asp-for="Image" type="file" class="custom-file">
+                                <span asp-validation-for="Image" class="text-danger"></span>
+                            </div>
+                        </div>
+                </div>
+               
+                <div class="mb-2">
+                    <button type="submit" class="btn btn-primary w-100" >Lưu bài viết</button>
+                </div>
+                
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" href="Login.html">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</div>
