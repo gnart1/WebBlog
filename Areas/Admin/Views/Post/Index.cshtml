@@ -1,4 +1,4 @@
-﻿@model List<WebBlog.Models.Post>
+﻿@model List<WebBlog.ViewModels.PostVM>
 @{
     ViewData["Title"] = "Danh sách bài viết";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -9,34 +9,38 @@
         <div class="card-header bg-primary">
             <h4 class="card-title text-white">Danh sách người dùng</h4>
         </div>
-        <div class="card-body">
-           @*  <table class="table table-striped table-hover" id="myTable">
-                <thead>
-                    <tr>
-                        <th>Tiêu đề</th>
-                        <th>Ghi chú</th>
-                        <th>Nội dung</th>
-                        <th>Ảnh</th>
-                        <th>Người tạo</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var post in Model)
-                    {
-                        <tr>
-                            <td>@post.Title</td>
-                            <td>@post.ShortDescription</td>
-                            <td>@post.Description</td>
-                            <td>@post.ImageUrl</td>
-                            <td>@post.ApplicationUserId</td>
-                            <td>
-                                <a asp-action="ResetPassword" asp-controller="User" asp-route-id="@post.Id" class="btn btn-info">Sửa bài viết</a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table> *@
+        <div class="card-body container-fluid" style="background-color:lightgray">
+            @foreach (var post in Model)
+            {
+             <div  class="rounded mb-4 bg-white p-2">
+                 <div class="row">
+                    <div class="col-2 d-flex justify-content-center flex-column">
+                        @if (post.ImageUrl == null)
+                        {
+                            <img class="img-fluid" src="~/image/default_image.png" style="object-fit:fill;height:130px">
+                        }
+                        else
+                        {
+                                <img class="img-fluid" src="~/image/@post.ImageUrl" style="object-fit:fill;height:130px">
+                        }
+                    </div>
+                     <div class="col-5 d-flex justify-content-center flex-column">
+                        <h4 style="font-size:2rem" class="text-primary fw-bold">@post.Title</h4>
+                        <p>Tác giả: @post.AuthorName</p>
+                        <p>Ngày viết: @post.CreateDate</p>
+                     </div>
+                     <div class="col-5 text-right" style="text-align:center; margin-top:50px">
+                            @* <button type="submit" class="btn btn-info">Sửa</button>|
+                            <button type="submit" class="btn btn-danger"> Xóa</button> *@
+                            <a class="btn btn-warning" asp-area="Admin" asp-controller="Post" asp-action="Edit">Sửa</a> |
+                            <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Delete" asp-route-id="@post.Id" onsubmit="return confirm('Bạn có chắc chắn muốn xóa bài viết')">
+                                <button type="submit" class="btn btn-danger">Xóa</button>
+                            </form>
+                            
+                     </div>
+                 </div>
+             </div>
+            }
         </div>
     </div>
 </div>
