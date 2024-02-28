@@ -7477,6 +7477,14 @@
       "PackagePath": "staticwebassets\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg"
     },
     {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\43f3f218-1a4c-4d7e-8cf0-c995d29245cc_contact.png",
+      "PackagePath": "staticwebassets\\image\\43f3f218-1a4c-4d7e-8cf0-c995d29245cc_contact.png"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\4aab119b-f205-4ddb-8674-a2508d779c1f_Admin.jpg",
+      "PackagePath": "staticwebassets\\image\\4aab119b-f205-4ddb-8674-a2508d779c1f_Admin.jpg"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png",
       "PackagePath": "staticwebassets\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png"
     },

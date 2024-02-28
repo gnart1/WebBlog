@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IFxFftvIhLSnTqsvAQbTJJr6LOJCwIEeZ8K5hoc/A8Y=",
+  "Hash": "bBgdX5kjpBjcDQnK34+kxvejEyxbeSNp2UJTajA2j3A=",
   "Source": "WebBlog",
   "BasePath": "_content/WebBlog",
   "Mode": "Default",
@@ -32893,6 +32893,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\43f3f218-1a4c-4d7e-8cf0-c995d29245cc_contact.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/43f3f218-1a4c-4d7e-8cf0-c995d29245cc_contact.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\43f3f218-1a4c-4d7e-8cf0-c995d29245cc_contact.png"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\4aab119b-f205-4ddb-8674-a2508d779c1f_Admin.jpg",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/4aab119b-f205-4ddb-8674-a2508d779c1f_Admin.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\4aab119b-f205-4ddb-8674-a2508d779c1f_Admin.jpg"
     },
     {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png",

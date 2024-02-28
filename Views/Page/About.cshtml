@@ -1,16 +1,26 @@
-﻿
+﻿@model WebBlog.ViewModels.PageVM
 @{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Về chúng tôi";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string pageImage = "";
+
+    if(Model.ImageUrl == null)
+    {
+        pageImage = "/blog/assets/img/about-bg.jpg";
+    }
+    else
+    {
+        pageImage = "/image/" + Model.ImageUrl;
+    }
 }
 
-<header class="masthead" style="background-image: url('/blog/assets/img/about-bg.jpg')">
+<header class="masthead" style="background-image: url('@pageImage')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="page-heading">
-                    <h1>Về chúng tôi</h1>
-                    <span class="subheading">Website xây dựng bởi: HHT</span>
+                    <h1>@Model.Title</h1>
+                    <span class="subheading">@Model.ShortDescription</span>
                 </div>
             </div>
         </div>
@@ -21,10 +31,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Admin: HHT</p>
-                <p>Ngày sinh: 13/06/2001</p>
-                <p>Địa chỉ: Võng La, Đông Anh, Hà Nội</p>
-                
+                @Html.Raw(Model.Description)
             </div>
         </div>
     </div>

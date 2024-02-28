@@ -54,7 +54,6 @@
             <hr class="sidebar-divider my-0">
             @if (User.IsInRole("Admin"))
             {
-               
                 <li class="nav-item active">
                     <a class="nav-link" asp-action="Index" asp-controller="User">
                         <i class="fas fa-fw fa-user"></i>
@@ -78,6 +77,12 @@
                             <a class="collapse-item" asp-area="Admin" asp-controller="Page" asp-action="PrivacyPolicy">Chính sách bảo mật</a>
                         </div>
                     </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" asp-action="Index" asp-controller="Setting" asp-area="Admin">
+                        <i class="fas fa-fw fa-gear"></i>
+                        <span>Cài đặt</span>
+                    </a>
                 </li>
             }
             <!-- Nav Item - Dashboard -->
