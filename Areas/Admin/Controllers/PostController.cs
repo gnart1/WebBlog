@@ -133,7 +133,7 @@ namespace WebBlog.Areas.Admin.Controllers
             post.Title = vm.Title;
             post.ShortDescription = vm.ShortDescription;
             post.Description = vm.Description;
-            if(vm.ImageUrl != null)
+            if(vm.Image != null)
             {
                 post.ImageUrl = UploadImage(vm.Image);
             }

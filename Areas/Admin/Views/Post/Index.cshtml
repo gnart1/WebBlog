@@ -7,7 +7,7 @@
     <a class="btn btn-primary mb-1" asp-action="Create" asp-controller="Post">Tạo bài biết</a>
     <div class="card">
         <div class="card-header bg-primary">
-            <h4 class="card-title text-white">Danh sách người dùng</h4>
+            <h4 class="card-title text-white">Danh sách bài viết</h4>
         </div>
         <div class="card-body container-fluid" style="background-color:lightgray">
             @foreach (var post in Model)
@@ -17,26 +17,29 @@
                     <div class="col-2 d-flex justify-content-center flex-column">
                         @if (post.ImageUrl == null)
                         {
-                            <img class="img-fluid" src="~/image/default_image.png" style="object-fit:fill;height:130px">
+                            <img class="img-fluid" src="~/image/default_image.png" style="object-fit:cover;height:100%;width:100%">
                         }
                         else
                         {
-                                <img class="img-fluid" src="~/image/@post.ImageUrl" style="object-fit:fill;height:130px">
+                                <img class="img-fluid" src="~/image/@post.ImageUrl" style="object-fit:cover;height:100%;width:100%">
                         }
                     </div>
                      <div class="col-5 d-flex justify-content-center flex-column">
-                        <h4 style="font-size:2rem" class="text-primary fw-bold">@post.Title</h4>
+                        <h4 style="font-size:1.5rem; font-weight:bolder" class="text-primary fw-bold">@post.Title</h4>
                         <p>Tác giả: @post.AuthorName</p>
                         <p>Ngày viết: @post.CreateDate</p>
                      </div>
-                     <div class="col-5 text-right" style="text-align:center; margin-top:50px">
-                            <a class="btn btn-warning" asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id" method="post">Sửa</a> |
-                            @* <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id">
-                                <button type="submit" class="btn btn-warning">Sửa</button> |
+                     <div class="col-5 text-right" style="text-align:center; margin-top:60px">
+                         <div class="d-flex justify-content-end align-items-center">
+                                <a class="btn btn-warning" asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id" method="post">Sửa</a> |
+                                @* <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id">
+                            <button type="submit" class="btn btn-warning">Sửa</button> |
                             </form> *@
-                            <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Delete" asp-route-id="@post.Id" onsubmit="return confirm('Bạn có chắc chắn muốn xóa bài viết')">
-                                <button type="submit" class="btn btn-danger">Xóa</button>
-                            </form>
+                                <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Delete" asp-route-id="@post.Id" onsubmit="return confirm('Bạn có chắc chắn muốn xóa bài viết')">
+                                    <button type="submit" class="btn btn-danger">Xóa</button>
+                                </form>
+                         </div>
+                            
                             
                      </div>
                  </div>

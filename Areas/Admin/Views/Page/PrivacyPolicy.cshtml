@@ -1,16 +1,16 @@
-﻿@model WebBlog.ViewModels.CreatePostVM
+﻿@model WebBlog.ViewModels.PageVM
 @{
-    ViewData["Title"] = "Sửa bài viết";
+    ViewData["Title"] = "Privacy Policy page";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container-fluid">
     <div class="card">
         <div class="card-header bg-primary">
-            <h4 class="card-title text-white">Sửa bài viết</h4>
+            <h4 class="card-title text-white">Chính sách bảo mật</h4>
         </div>
         <div class="card-body">
-            <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Edit" enctype="multipart/form-data">
+            <form asp-area="Admin" asp-controller="Page" asp-action="PrivacyPolicy" enctype="multipart/form-data">
                 <input type="hidden" asp-for="Id" />
                 <input type="hidden" asp-for="ImageUrl" />
                 <div class="row">
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        @if(Model.ImageUrl == null)
+                        @if (Model.ImageUrl == null)
                         {
                             <div class="mb-2">
                                 <img src="~/image/default_image.png" id="changeImage" class="img-fluid" />

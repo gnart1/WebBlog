@@ -44,7 +44,7 @@ namespace WebBlog.Utilites
                     new Page()
                     {
                          Title = "About Us",
-                    Slug = "About-Us"
+                    Slug = "About"
                     },
                     new Page()
                     {

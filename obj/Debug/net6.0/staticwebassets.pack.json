@@ -7469,8 +7469,24 @@
       "PackagePath": "staticwebassets\\image\\2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg"
     },
     {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\371f6778-dfb6-442a-9fc5-ab37db5e0cfd_cp amazon.jfif",
+      "PackagePath": "staticwebassets\\image\\371f6778-dfb6-442a-9fc5-ab37db5e0cfd_cp amazon.jfif"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg",
       "PackagePath": "staticwebassets\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png",
+      "PackagePath": "staticwebassets\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\8d950f16-596e-46b5-ae60-ba131925d869_amz cp.jfif",
+      "PackagePath": "staticwebassets\\image\\8d950f16-596e-46b5-ae60-ba131925d869_amz cp.jfif"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\a35d2fe3-19fb-4c2b-b998-08e52fbcd326_contact.png",
+      "PackagePath": "staticwebassets\\image\\a35d2fe3-19fb-4c2b-b998-08e52fbcd326_contact.png"
     },
     {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\c4fb4846-7728-4f87-9655-cb6303c723ba_aspnetcore.png",
@@ -7483,6 +7499,10 @@
     {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\default_image.png",
       "PackagePath": "staticwebassets\\image\\default_image.png"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\f8eab94f-1911-49df-800b-93da1aea7324_cp amazon.jfif",
+      "PackagePath": "staticwebassets\\image\\f8eab94f-1911-49df-800b-93da1aea7324_cp amazon.jfif"
     },
     {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\js\\site.js",
