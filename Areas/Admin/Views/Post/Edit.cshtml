@@ -1,0 +1,75 @@
+﻿@model WebBlog.ViewModels.CreatePostVM
+@{
+    ViewData["Title"] = "Sửa bài viết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h4 class="card-title text-white">Sửa bài viết</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Edit" enctype="multipart/form-data">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="ImageUrl" />
+                <div class="row">
+                    <div class="col-9">
+                        <div class="mb-2">
+                            <label>Tiêu đề</label>
+                            <input asp-for="Title" type="text" class="form-control">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label>Ghi chú</label>
+                            <input asp-for="ShortDescription" type="text" class="form-control">
+                            <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                        </div>
+                        <div class="mb-2">
+                            <label>Nội dung</label>
+                            <textarea asp-for="Description" type="text" class="form-control" rows="8"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        @if(Model.ImageUrl == null)
+                        {
+                            <div class="mb-2">
+                                <img src="~/image/default_image.png" id="changeImage" class="img-fluid" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="mb-2">
+                                <img src="~/image/@Model.ImageUrl" id="changeImage" class="img-fluid" />
+                            </div>
+                        }
+                        <div class="mb-2">
+                            <label>Ảnh</label>
+                            <input asp-for="Image" type="file" class="custom-file" id="custom-file">
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <button type="submit" class="btn btn-primary w-100">Lưu bài viết</button>
+                </div>
+
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" href="Login.html">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(".custom-file").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            document.getElementById('changeImage').src = window.URL.createObjectURL(this.files[0])
+        });
+    </script>
+}

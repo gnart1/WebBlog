@@ -90,6 +90,58 @@ namespace WebBlog.Areas.Admin.Controllers
             return RedirectToAction("Index");
             
         }
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var post = await _context.Posts!.FirstOrDefaultAsync(x=> x.Id == id);
+            if (post == null)
+            {
+                _notification.Error("Error");
+                return View();
+            }
+
+            var loggedInUser = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == User.Identity!.Name);
+            var loggedInUserRole = await _userManager.GetRolesAsync(loggedInUser!);
+            if (loggedInUserRole[0] != Roles.WebAdmin && loggedInUser!.Id != post.ApplicationUserId)
+            {
+                _notification.Error("Bạn không có quyền sửa bài viết của người khác");
+                return RedirectToAction("Index");
+            }
+            
+            var vm = new CreatePostVM()
+            {
+                Id = post.Id,
+                Title = post.Title,
+                ShortDescription = post.ShortDescription,
+                Description = post.Description,
+                ImageUrl = post.ImageUrl,
+            };
+            return View(vm);
+        }
+        public async Task<IActionResult> Edit(CreatePostVM vm)
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+            var post = await _context.Posts!.FirstOrDefaultAsync(x=>x.Id == vm.Id);
+            if(post == null)
+            {
+                _notification.Error("Error");
+                return View();
+            }
+            post.Title = vm.Title;
+            post.ShortDescription = vm.ShortDescription;
+            post.Description = vm.Description;
+            if(vm.ImageUrl != null)
+            {
+                post.ImageUrl = UploadImage(vm.Image);
+            }
+            _context.Posts!.Update(post);
+            await _context.SaveChangesAsync();
+            _notification.Success("Sửa bài viết thành công!");
+            return RedirectToAction("Index", "Post", new {area="Admin"});
+        }
         private string UploadImage(IFormFile file)
         {
             string uniqueFileName = "";

@@ -7465,6 +7465,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg",
+      "PackagePath": "staticwebassets\\image\\2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg",
       "PackagePath": "staticwebassets\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg"
     },

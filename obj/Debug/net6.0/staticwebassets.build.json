@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JPfmQN9ytexkT/+oyZPCGIYZgOX6Qb3C6I5SbXBhgyo=",
+  "Hash": "CG8Wa+OW319F9tc442NAsP67HuEHo6RWz9fFB39CDlI=",
   "Source": "WebBlog",
   "BasePath": "_content/WebBlog",
   "Mode": "Default",
@@ -32842,6 +32842,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg"
     },
     {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\3b8a0635-c9db-475f-9248-7d56157e6a1d_onepice105.jpg",

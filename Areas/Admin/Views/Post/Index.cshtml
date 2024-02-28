@@ -30,9 +30,10 @@
                         <p>Ngày viết: @post.CreateDate</p>
                      </div>
                      <div class="col-5 text-right" style="text-align:center; margin-top:50px">
-                            @* <button type="submit" class="btn btn-info">Sửa</button>|
-                            <button type="submit" class="btn btn-danger"> Xóa</button> *@
-                            <a class="btn btn-warning" asp-area="Admin" asp-controller="Post" asp-action="Edit">Sửa</a> |
+                            <a class="btn btn-warning" asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id" method="post">Sửa</a> |
+                            @* <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id">
+                                <button type="submit" class="btn btn-warning">Sửa</button> |
+                            </form> *@
                             <form method="post" asp-area="Admin" asp-controller="Post" asp-action="Delete" asp-route-id="@post.Id" onsubmit="return confirm('Bạn có chắc chắn muốn xóa bài viết')">
                                 <button type="submit" class="btn btn-danger">Xóa</button>
                             </form>
