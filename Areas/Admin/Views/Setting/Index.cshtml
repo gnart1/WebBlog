@@ -12,6 +12,7 @@
         </div>
         <div class="card-body">
             <form method="post" asp-area="Admin" asp-controller="Setting" asp-action="Index" enctype="multipart/form-data">
+                <input asp-for="Id" type="hidden" />
                 <div class="row">
                     <div class="col-9">
                         <div class="mb-2">

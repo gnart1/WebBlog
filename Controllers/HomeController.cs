@@ -1,21 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using WebBlog.Data;
 using WebBlog.Models;
+using WebBlog.ViewModels;
 
 namespace WebBlog.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var vm = new HomeVM();
+            var setting = _context.Settings!.ToList();
+            vm.Title = setting[0].Title;
+            vm.ShortDescription = setting[0].ShortDescription;
+            vm.ImageUrl = setting[0].ImageUrl;
+            vm.Posts = _context.Posts!.Include(x => x.ApplicationUser).ToList();
+            return View(vm);
         }
 
         public IActionResult Privacy()

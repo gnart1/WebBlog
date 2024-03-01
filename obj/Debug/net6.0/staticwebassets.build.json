@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bBgdX5kjpBjcDQnK34+kxvejEyxbeSNp2UJTajA2j3A=",
+  "Hash": "Z5kF/ZkTz7MKwX55zujBmo8lMzdT0Cd2DUwoROxrw1M=",
   "Source": "WebBlog",
   "BasePath": "_content/WebBlog",
   "Mode": "Default",
@@ -32946,6 +32946,23 @@
       "OriginalItemSpec": "wwwroot\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png"
     },
     {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\87a007d6-efd1-4983-87ac-b7288fc3ad65_home.jpeg",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/87a007d6-efd1-4983-87ac-b7288fc3ad65_home.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\87a007d6-efd1-4983-87ac-b7288fc3ad65_home.jpeg"
+    },
+    {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\8d950f16-596e-46b5-ae60-ba131925d869_amz cp.jfif",
       "SourceId": "WebBlog",
       "SourceType": "Discovered",
@@ -33012,6 +33029,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\d109c2c5-e97e-427a-b6f0-d51d055b6909_tomjerry.jpg"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\dae10c6e-47b9-4914-b7ce-59c440c5131d_setting.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/dae10c6e-47b9-4914-b7ce-59c440c5131d_setting.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\dae10c6e-47b9-4914-b7ce-59c440c5131d_setting.png"
     },
     {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\default_image.png",
