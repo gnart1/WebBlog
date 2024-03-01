@@ -33,7 +33,7 @@
             {
                 <!-- Post preview-->
                 <div class="post-preview">
-                    <a asp-action="#" asp-controller="Post" asp-area="Admin">
+                    <a asp-action="Post" asp-route-slug="@post.Slug" asp-controller="Blog">
                         <h2 class="post-title">@post.Title</h2>
                         <h3 class="post-subtitle">@post.ShortDescription</h3>
                     </a>
