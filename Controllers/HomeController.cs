@@ -19,16 +19,17 @@ namespace WebBlog.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(int? page)
+        public IActionResult Index()
         {
             var vm = new HomeVM();
             var setting = _context.Settings!.ToList();
             vm.Title = setting[0].Title;
             vm.ShortDescription = setting[0].ShortDescription;
             vm.ImageUrl = setting[0].ImageUrl;
-            int pageSize = 2;
-            int pageNumber = (page ?? 1);
-            vm.Posts = await _context.Posts!.Include(x => x.ApplicationUser).ToPagedListAsync(pageNumber, pageSize);
+
+            //int pageSize = 2; int? page
+            //int pageNumber = (page ?? 1);
+            vm.Posts = _context.Posts!.Include(x => x.ApplicationUser).ToList();
             return View(vm);
         }
 

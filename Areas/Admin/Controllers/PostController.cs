@@ -50,7 +50,7 @@ namespace WebBlog.Areas.Admin.Controllers
             {
                 Id = x.Id,
                 Title = x.Title,
-                CreateDate = x.CreatedDate,
+                CreatedDate = x.CreatedDate,
                 ImageUrl = x.ImageUrl,
                 AuthorName = x.ApplicationUser!.FirstName + " " + x.ApplicationUser.LastName
             }).ToList();
@@ -58,7 +58,7 @@ namespace WebBlog.Areas.Admin.Controllers
             int pageSize = 3;
             int pageNumber = (page ?? 1);
 
-            return View(await listOfPostsVM.ToPagedListAsync(pageNumber, pageSize));
+            return View(await listOfPostsVM.OrderByDescending(x => x.CreatedDate).ToPagedListAsync(pageNumber, pageSize));
         }
 
         [HttpGet]

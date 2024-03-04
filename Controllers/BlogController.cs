@@ -11,11 +11,12 @@ namespace WebBlog.Controllers
         private readonly ApplicationDbContext _context;
         private INotyfService _notification { get; }
 
-        public BlogController(ApplicationDbContext context)
+        public BlogController(ApplicationDbContext context, INotyfService notification)
         {
             _context = context;
+            _notification = notification;
         }
-        [HttpGet]
+        [HttpGet("[controller]/{slug}")]
         public IActionResult Post(string slug)
         {
             if (slug == null)
