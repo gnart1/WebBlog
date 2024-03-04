@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z5kF/ZkTz7MKwX55zujBmo8lMzdT0Cd2DUwoROxrw1M=",
+  "Hash": "B+jAhaUXiZmC8pgCGN+idW4WmdP5KhA6qEGSjxe7sNc=",
   "Source": "WebBlog",
   "BasePath": "_content/WebBlog",
   "Mode": "Default",
@@ -32844,6 +32844,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\0961751f-077b-4939-98ea-769a49a6f1bb_Screenshot 2023-12-09 143817.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/0961751f-077b-4939-98ea-769a49a6f1bb_Screenshot 2023-12-09 143817.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\0961751f-077b-4939-98ea-769a49a6f1bb_Screenshot 2023-12-09 143817.png"
+    },
+    {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\2fef2123-a45b-494c-9c46-2947f752ef95_tomjerry.jpg",
       "SourceId": "WebBlog",
       "SourceType": "Discovered",
@@ -32946,6 +32963,40 @@
       "OriginalItemSpec": "wwwroot\\image\\54f7a770-3f54-411a-8e82-b1d6c7371eb8_contact.png"
     },
     {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\5ad92440-5a8a-4a8f-91f5-e78041d04356_c#c++.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/5ad92440-5a8a-4a8f-91f5-e78041d04356_c#c++.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\5ad92440-5a8a-4a8f-91f5-e78041d04356_c#c++.png"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\77ad0647-713d-4272-9f03-613d15838def_c#c++.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/77ad0647-713d-4272-9f03-613d15838def_c#c++.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\77ad0647-713d-4272-9f03-613d15838def_c#c++.png"
+    },
+    {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\87a007d6-efd1-4983-87ac-b7288fc3ad65_home.jpeg",
       "SourceId": "WebBlog",
       "SourceType": "Discovered",
@@ -33012,6 +33063,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\c4fb4846-7728-4f87-9655-cb6303c723ba_aspnetcore.png"
+    },
+    {
+      "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\cea3273d-68cd-4333-b529-be35718ee10e_Screenshot 2024-03-04 153055.png",
+      "SourceId": "WebBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\",
+      "BasePath": "_content/WebBlog",
+      "RelativePath": "image/cea3273d-68cd-4333-b529-be35718ee10e_Screenshot 2024-03-04 153055.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\cea3273d-68cd-4333-b529-be35718ee10e_Screenshot 2024-03-04 153055.png"
     },
     {
       "Identity": "D:\\ASP.NET Core\\WebBlog\\WebBlog\\wwwroot\\image\\d109c2c5-e97e-427a-b6f0-d51d055b6909_tomjerry.jpg",

@@ -258,3 +258,6 @@ D:\ASP.NET Core\WebBlog\WebBlog\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.
 D:\ASP.NET Core\WebBlog\WebBlog\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\ASP.NET Core\WebBlog\WebBlog\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\ASP.NET Core\WebBlog\WebBlog\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_LoginLayout.cshtml.rz.scp.css
+D:\ASP.NET Core\WebBlog\WebBlog\bin\Debug\net6.0\JetBrains.Annotations.dll
+D:\ASP.NET Core\WebBlog\WebBlog\bin\Debug\net6.0\X.PagedList.dll
+D:\ASP.NET Core\WebBlog\WebBlog\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll

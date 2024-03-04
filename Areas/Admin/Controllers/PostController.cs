@@ -8,6 +8,7 @@ using WebBlog.Data;
 using WebBlog.Models;
 using WebBlog.Utilites;
 using WebBlog.ViewModels;
+using X.PagedList;
 
 namespace WebBlog.Areas.Admin.Controllers
 {
@@ -30,7 +31,7 @@ namespace WebBlog.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
             var listOfPosts = new List<Post>();
             var loggedInUser = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == User.Identity!.Name);
@@ -43,6 +44,8 @@ namespace WebBlog.Areas.Admin.Controllers
             {
                 listOfPosts = await _context.Posts!.Include(x => x.ApplicationUser).Where(x=>x.ApplicationUser!.Id == loggedInUser!.Id).ToListAsync();
             }
+
+
             var listOfPostsVM = listOfPosts.Select(x => new PostVM()
             {
                 Id = x.Id,
@@ -51,7 +54,11 @@ namespace WebBlog.Areas.Admin.Controllers
                 ImageUrl = x.ImageUrl,
                 AuthorName = x.ApplicationUser!.FirstName + " " + x.ApplicationUser.LastName
             }).ToList();
-            return View(listOfPostsVM);
+
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+
+            return View(await listOfPostsVM.ToPagedListAsync(pageNumber, pageSize));
         }
 
         [HttpGet]
